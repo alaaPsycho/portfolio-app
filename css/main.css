@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,400&display=swap');
+:root{--yellow:#23beda;}/*--yellow:#f9ca24;*/ /*#9fcf1b*/
+*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+/**::selection{
+    background-color: var(--yellow);
+    color:#ccc;
+}*/
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+  
+html::-webkit-scrollbar-track{
+    background-color: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--yellow);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(21, 81, 211);
+  }
+  /*body::-webkit-scrollbar {
+    display: none;
+  }*/
+  
+body{
+    background-color: #111;
+    overflow-x: hidden;
+    padding-right: 35rem;
+}
+header{
+    position: fixed;
+    top: 0;right: 0%;
+    width: 100%;
+    background-color: #222;
+    width: 35rem;
+    height: 100vh;
+    z-index: 1000;
+
+}
+header .profile{
+    display: flex;
+    padding: 3rem 0;
+}
+header .profile img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 10px solid var(--yellow);
+    position: relative;
+    left: 80PX;
+    top: 0PX;
+    object-fit: cover;
+    z-index: 50;
+    animation: moving 2s  1;
+}
+@keyframes moving {
+    0%{left: 650PX;}
+    100%{left: 80PX;}
+
+}
+header .profile img:hover{
+    filter:drop-shadow(20px 20px 20px #000)brightness(1) saturate(100%) contrast(150%) hue-rotate(20deg);;/*contrast(150%)*/
+    transform: scale(1.3)
+    ;/*grayscale(0.5) blur(100px)*/
+}
+header .profile .my-name{
+    position: relative;
+    top: 217px;
+    left: -95px;
+    margin: -21px 0;
+    z-index: 10;
+    font-size: 3rem;
+    color: #fff;
+
+}
+    header .profile .my-name span{
+        color: var(--yellow);
+        font-size: 4rem;
+    }
+
+header .profile .specialty{
+    position: absolute;
+    text-align: center;
+    top: 268PX;
+    left: 65PX;
+    color: white;
+    font-size: 2.3rem;
+}
+header .nav{
+display: flex;    
+flex-wrap: wrap;
+flex-direction: row;
+position: relative;
+}
+header .nav ul{
+position: absolute;
+top: 0015PX;
+left: 0;
+padding: 3rem 0;
+z-index: 20;
+}
+header .nav ul li{
+    margin: 1rem;
+    padding: 10PX;
+    font-size: 2rem;
+    border: 3px solid var(--yellow);
+    border-radius: 3rem;
+    width: 30rem;
+    text-align: center;
+    background: var(--yellow);
+    height: auto;
+}
+header .nav ul li a{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+header .nav ul li a.active{
+    color: black;
+    }
+
+    #arrow{
+      position: relative;
+      top: 40PX;
+      z-index: -1;
+
+    }
+#menu{
+    position: fixed;
+    top: 2rem;left: 2rem;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+/*  <!--home section start-->*/
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+.home h1 span{
+color: var(--yellow);
+position: relative;
+top: -5PX;}
+
+.home p{
+    font-size: 5rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+.btn{
+    padding: .7rem 3rem;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;}
+.btn:hover{
+    background-color: var(--yellow);
+}
+/*home section end*/
+
+/*     <!--about section start-->*/
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+.about .row .info{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    margin: 6rem;
+}
+.about .row .info h3{
+    font-size: 2rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.about .row .info h3 span{
+    color: #eee;
+    padding: 0 .5rem;
+}
+.about .row .counter{
+    flex: 1 1 48rem;;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;}
+.about .row .counter .box{
+    width: 20rem;
+    background-color: #222;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 6px;
+    flex: 1;
+}
+
+.about .row .counter .box span{
+font-size: 3.9rem;
+color: var(--yellow);}
+.about .row .counter .box  h3{
+font-size: 2rem;
+color: #eee;
+}
+.h1{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+.h1 span{
+    color: var(--yellow);}
+/*     <!--about section end-->*/
+
+/* <!--education section start-->*/
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+.education .box-container .box{
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+.education .box-container .box h3{
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 1.5rem;
+}
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{
+position: absolute;
+top: -1.5rem ;left:-2.5rem;
+height: 5rem;
+width: 5rem;
+border-radius: 50%;
+line-height: 5rem;
+text-align: center;
+font-size: 2rem;
+color: #fff;
+background-color: var(--yellow);
+}
+
+
+
+
+/* <!--education section end-->*/
+/* <!--portfalio section start-->*/
+.portfalio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.portfalio .box-container .box{
+height: 20rem;
+width: 26rem;
+border-radius: 1rem;
+margin: 2rem;
+overflow: hidden;
+}
+.portfalio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;}
+    .portfalio .box-container .box:hover img{
+        transform: scale(1.5);
+    }
+
+
+
+
+
+
+
+
+
+/* <!--portfalio section end-->*/
+/*skills section start*/
+.container2{
+    padding: 40PX;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 30PX rgba(0, 0, 0, 0.9);
+    border-radius: 6px;
+    height: 80vh;
+    margin: auto;
+    transform: translateY(50%);
+    overflow: hidden;
+    margin-top: -280PX;
+     
+}
+.progress{
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.411);
+    margin: 20PX 0;
+    border-radius: 20PX;
+    height: 20PX;    
+    margin-top: 15PX;
+
+
+}
+.progress-bar{
+   width: 0%;
+   color: black;
+    background-color: var(--yellow);
+    border-radius: 10PX ;
+    position: relative;
+    transition: all 2s ease;
+    /*width: 100% ;*/
+}
+.progress-bar span{
+    font-size: 20PX;
+    font-weight: 800;
+    border-radius: 20PX;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    text-align: center;
+    background-color: var(--yellow);
+}
+.container2 p{
+    font-size: 25PX;
+    font-weight: 800;
+    width: 100%;
+    height: 30PX;
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    border-radius: 6px;
+    position: relative;
+    left: 50%;
+}
+/*skills section end*/
+/*   <!--contact section start-->*/
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .content{
+flex: 1 1 30rem;
+padding: 4rem;
+padding-bottom: 0;}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3{
+    color: #eee;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    font-weight: 800;
+}
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: var(--yellow);
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;}
+    .contact .row form .box{
+        padding: 1rem;
+        margin: 1rem 0;
+        background-color: #3333;
+        color: #fff;
+        text-transform: none;
+        font-size: 1.7rem;
+        width: 100%;
+    }
+    .contact .row form .message{
+        height: 15rem;
+        resize: none;
+    }
+   .social{
+      display: flex;  
+      flex-flow: row nowrap;
+      gap: 3PX;
+      justify-content: space-between;
+
+    }
+    .social a{
+        margin-left: 10PX;
+        background-color: transparent;
+    }
+    .social i{
+        margin-left: 20PX;
+        width: 100PX;
+        height: 100PX;
+       font-size: 5rem;
+        color: var(--yellow);
+        cursor: pointer;
+    }
+
+/*   <!--contact section end-->*/
+
+/*<!--start scroll top-->*/
+.top{
+    position: fixed;
+    bottom: 0PX;
+    left: 10PX;
+    z-index: 100;
+    display: none;
+cursor :pointer;
+}
+.top img{
+    width: 50PX;
+    height: 50PX;
+    border-radius: 50%;
+        cursor: pointer;
+
+}
+/*<!--end scroll top-->*/
+
+
+
+
+
+
+/*media queries*/
+@media (max-width:1200PX){
+    html{
+        font-size:55%;
+        
+    }
+    .home{
+        padding: 1rem 4rem;
+    }
+     
+}
+@media (max-width:991px){
+    header{
+        right:  -120%;
+        
+    }
+    header.toggle{right:   0;}
+     #menu{display: block;}
+}
+@media (max-width:767PX){
+    html{
+        font-size: 50%;
+    }
+body{
+    padding: 0;
+}
+    }
+
+@media (max-width:400PX){
+    header{
+        width: 100vw;
+        
+    }
+    header .profile .my-name{
+        position: absolute;
+        top: 187px;
+        left: -81px;
+        margin: -21px 0;
+        z-index: 10;
+        font-size: 2rem;
+        color: #fff;
+        }
+    header.toggle{right: 0;}
+     #menu{display: block;}
+     .h1{margin: 0 3rem;}
+     .about .row .counter .box{width: 100%;}
+     .education .box-container .box{
+        width: 100%;}
+        .portfalio .box-container .box{width: 100%;}
+        .contact .row form{margin: 3rem 0;}
+}
+/*end media queries*/
